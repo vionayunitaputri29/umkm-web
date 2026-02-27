@@ -1,0 +1,85 @@
+.admin-container {
+    padding: 120px 5%;
+    background-color: #0c0c0c;
+    min-height: 100vh;
+    color: white;
+}
+
+.admin-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #cfa670;
+}
+
+.admin-form {
+    max-width: 600px;
+    margin: 0 auto 50px;
+    padding: 30px;
+    background: #161616;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid #222;
+}
+
+.admin-form input {
+    padding: 12px;
+    background: #252525;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+}
+
+.admin-form button {
+    background: #cfa670;
+    color: black;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-form button:hover {
+    background: #b88f5d;
+}
+
+.admin-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+}
+
+.admin-item {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #cfa670;
+}
+
+.admin-item span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.admin-item button {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-item button:hover {
+    background: #cc0000;
+}

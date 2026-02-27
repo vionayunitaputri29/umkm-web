@@ -6,7 +6,11 @@ function Hero() {
             <div className="hero-content">
                 <h1>Kedai Kopi</h1>
                 <p>Nikmati kopi terbaik dari biji kopi pilihan ☕</p>
-                <button>Pesan Sekarang Juga</button>
+
+                {/* Tombol diarahkan ke ID "menu" di halaman yang sama */}
+                <a href="#menu">
+                    <button className="btn-pesan-hero">Pesan Sekarang Juga</button>
+                </a>
             </div>
         </section>
     );

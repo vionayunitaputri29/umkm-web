@@ -1,37 +1,41 @@
 .produk-section {
-    padding: 80px 5%;
+    padding: 10x0px 5%;
     background-color: #0c0c0c;
     color: white;
 }
 
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
+.produk-section .container {
+    max-width: 1050px;
+    margin: 0 auto;
 }
 
 .section-header h1 {
-    font-size: 2.5rem;
-    margin-top: 18px;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: capitalize;
 }
 
 .produk-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 10px 0;
+    justify-content: center;
 }
 
 .produk-card {
-    background: #161616;
-    border-radius: 20px;
+    background: #121212;
+    border-radius: 25px;
     overflow: hidden;
-    position: relative;
-    border: 1px solid #222;
-    transition: 0.4s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.5s;
 }
 
 .produk-card:hover {
-    transform: translateY(-10px);
-    border-color: #cfa670;
+    transform: translateY(-15px);
+    border-color: rgba(207, 166, 112, 0.3);
 }
 
 .produk-badge {
@@ -49,9 +53,9 @@
 
 .produk-img img {
     width: 100%;
-    height: 250px;
+    height: 200px;
     object-fit: cover;
-    transition: 0.5s;
+    display: block;
 }
 
 .produk-card:hover .produk-img img {
@@ -59,29 +63,31 @@
 }
 
 .produk-detail {
-    padding: 25px;
-    text-align: center;
+    padding: 30px;
+    background: linear-gradient(to bottom, #121212, #0d0d0d);
 }
 
 .produk-detail h4 {
-    font-size: 1.4rem;
-    margin-bottom: 8px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
 }
 
 .produk-detail .price {
     color: #cfa670;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px 0 25px;
 }
 
+/* Tombol Pesan*/
 .btn-pesan {
     width: 100%;
-    background: transparent;
-    border: 2px solid #cfa670;
+    padding: 14px;
+    border-radius: 15px;
+    background: #1a1a1a;
     color: #cfa670;
-    padding: 12px;
-    border-radius: 30px;
+    border: 1px solid #cfa670;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
@@ -90,6 +96,40 @@
 .btn-pesan:hover {
     background: #cfa670;
     color: #000;
+}
+
+
+/* -- Desain Tombol Menu (Kopi, Non-Kopi, Snack) --- */
+
+.filter-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 60px;
+
+}
+
+.filter-buttons button {
+    background: transparent;
+    border: 1px solid #333;
+    color: #999;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 0.9rem;
+}
+
+.filter-buttons button:hover {
+    border-color: #cfa670;
+    color: #cfa670;
+}
+
+.filter-buttons button.active {
+    background: #cfa670;
+    color: #000;
+    border-color: #cfa670;
+    box-shadow: 0 10px 20px rgba(207, 166, 112, 0.2);
+    transform: translateY(-3px);
 }
 
 /* Modal Style */
@@ -157,4 +197,42 @@
     padding: 12px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+
+/* Efek Animasi Muncul Halus */
+
+@keyframe fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+
+/* Tambahkan sedikit per kartu biar muncul bergantian */
+
+.produk-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.produk-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.produk-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.produk-card:nth-child(4) {
+    animation-delay: 0.4s;
 }
