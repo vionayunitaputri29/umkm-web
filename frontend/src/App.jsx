@@ -6,8 +6,6 @@ import About from "./components/About";
 import Produk from "./components/Produk";
 import RiwayatPesanan from "./components/RiwayatPesanan";
 import Footer from "./components/Footer";
-import WhatsAppButton from "./components/WhatsAppButton";
-import GalleryAndTestimonials from "./components/GalleryAndTestimonials";
 import Cart from "./components/Cart";
 
 // IMPORT KOMPONEN BARU
@@ -95,7 +93,6 @@ function App() {
                 </Routes>
 
                 <Footer />
-                <WhatsAppButton />
 
                 {isCartOpen && (
                     <Cart

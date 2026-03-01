@@ -13,42 +13,7 @@ function Cart({ cartItems, onRemove, onUpdateQty, onClose }) {
 
     const handleCheckout = (e) => {
         e.preventDefault();
-        const formData = new FormData(e.target);
-
-        const customer = {
-            name: formData.get("name"),
-            table: formData.get("table"),
-            sugar: formData.get("sugar") || "-",
-            size: formData.get("size") || "-",
-            sauce: formData.get("sauce") || "-",
-            payment: formData.get("payment"),
-            note: formData.get("note") || "-"
-        };
-
-        // Format pesan WhatsApp untuk BANYAK item
-        const phone = "6283181580035";
-        let detailPesanan = "";
-        cartItems.forEach((item, index) => {
-            detailPesanan += `${index + 1}. *${item.name}* (${item.qty} pcs) - Rp ${(parseInt(item.price.replace(/[^0-9]/g, "")) * item.qty).toLocaleString()}\n`;
-        });
-
-        const message = `Halo Admin *KEDAI KOPI*, ada pesanan baru! ☕
-
-*--- DATA PELANGGAN ---*
-*Nama:* ${customer.name}
-*Meja:* ${customer.table}
-${hasDrink ? `*Gula:* ${customer.sugar}\n*Ukuran:* ${customer.size}\n` : ""}${hasSnack ? `*Saus:* ${customer.sauce}\n` : ""}*Bayar:* ${customer.payment}
-
-*--- DAFTAR PESANAN ---*
-${detailPesanan}
-*Total Tagihan: Rp ${totalHarga.toLocaleString()}*
-
-*Catatan:* ${customer.note}
-
-_Mohon segera diproses ya, terima kasih!_`;
-
-        const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-        window.open(waUrl, "_blank");
+        alert("Terima kasih! Ini adalah 'Mode Demo' untuk portofolio. Fitur pesanan via WhatsApp telah dinonaktifkan untuk tujuan pameran.");
     };
 
     return (
