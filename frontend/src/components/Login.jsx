@@ -57,7 +57,7 @@ function Login({ onLogin }) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundImage: "url('/images/coffe.jpg')",
+            backgroundImage: "url('/images/coffe.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundColor: "rgba(0,0,0,0.5)",
