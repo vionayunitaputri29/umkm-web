@@ -8,10 +8,10 @@ function Produk({ onAddToCart }) {
 
     useEffect(() => {
         const defaultProducts = [
-            { id: 101, name: "Espresso", price: "Rp 15.000", category: "Kopi", img: "https://tse3.mm.bing.net/th/id/OIP.XRnMPKM91AMMyh1NOrg4eAHaEJ?pid=Api&P=0&h=180", rating: 4 },
-            { id: 102, name: "Matcha Latte", price: "Rp 25.000", category: "Non-Kopi", img: "https://th.bing.com/th/id/OIP.flBklnuNRn4oS5mqWimvgwHaLH?pid=ImgDetMain", rating: 5 },
-            { id: 103, name: "French Fries", price: "Rp 18.000", category: "Snack", img: "https://tse3.mm.bing.net/th/id/OIP.8HOfsUgGi_vKT1lzXtFlhQHaE8?pid=Api&P=0&h=180", rating: 4 },
-            { id: 104, name: "Latte", price: "Rp 20.000-25.000", category: "Kopi", img: "https://tse2.mm.bing.net/th/id/OIP.vKO__-thMjsj5FaDPhs-tAHaEK?cb=defcache2&defcache=1&rs=1&pid=ImgDetMain&o=7&rm=3", rating: 4.5 },
+            { id: 101, name: "Espresso", price: "Rp 15.000", category: "Kopi", img: "/images/espresso.webp", rating: 4 },
+            { id: 102, name: "Matcha Latte", price: "Rp 25.000", category: "Non-Kopi", img: "/images/", rating: 5 },
+            { id: 103, name: "French Fries", price: "Rp 18.000", category: "Snack", img: "/images/", rating: 4 },
+            { id: 104, name: "Latte", price: "Rp 20.000-25.000", category: "Kopi", img: "/images/", rating: 4.5 },
         ];
         setProducts(defaultProducts);
         setLoading(false);

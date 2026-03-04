@@ -9,10 +9,10 @@ function Menu() {
     // Ambil data dari Backend (API)
     useEffect(() => {
         const defaultProducts = [
-            { id: 1, name: "Espresso", price: "Rp 15.000", img: "https://tse3.mm.bing.net/th/id/OIP.XRnMPKM91AMMyh1NOrg4eAHaEJ?pid=Api&P=0&h=180" },
-            { id: 2, name: "Cappuccino", price: "Rp 25.000", img: "https://tse3.mm.bing.net/th/id/OIP.rhbU05ivjztzkjDs_pUrUgHaFj?pid=Api&P=0&h=180" },
-            { id: 3, name: "Latte Art", price: "Rp 28.000", img: "https://tse3.mm.bing.net/th/id/OIP.peG0_R13Qc4fxoWkyzf46AHaE8?pid=Api&P=0&h=180" },
-            { id: 4, name: "Cold Brew", price: "Rp 22.000", img: "https://tse4.mm.bing.net/th/id/OIP.wHJ7vQY6_J96rrWwMxrzMQAAAA?pid=Api&P=0&h=180" },
+            { id: 1, name: "Espresso", price: "Rp 15.000", img: "/images/espresso.webp" },
+            { id: 2, name: "Matcha Latte", price: "Rp 25.000", img: "https://tse3.mm.bing.net/th/id/OIP.rhbU05ivjztzkjDs_pUrUgHaFj?pid=Api&P=0&h=180" },
+            { id: 3, name: "French Fries", price: "Rp 18.000", img: "https://tse3.mm.bing.net/th/id/OIP.peG0_R13Qc4fxoWkyzf46AHaE8?pid=Api&P=0&h=180" },
+            { id: 4, name: "Latte", price: "Rp 20.000-25.000", img: "https://tse4.mm.bing.net/th/id/OIP.wHJ7vQY6_J96rrWwMxrzMQAAAA?pid=Api&P=0&h=180" },
         ];
 
         fetch("http://localhost:5000/api/products")
