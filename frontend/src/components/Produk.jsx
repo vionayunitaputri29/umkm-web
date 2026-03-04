@@ -9,9 +9,9 @@ function Produk({ onAddToCart }) {
     useEffect(() => {
         const defaultProducts = [
             { id: 101, name: "Espresso", price: "Rp 15.000", category: "Kopi", img: "/images/espresso.webp", rating: 4 },
-            { id: 102, name: "Matcha Latte", price: "Rp 25.000", category: "Non-Kopi", img: "/images/", rating: 5 },
-            { id: 103, name: "French Fries", price: "Rp 18.000", category: "Snack", img: "/images/", rating: 4 },
-            { id: 104, name: "Latte", price: "Rp 20.000-25.000", category: "Kopi", img: "/images/", rating: 4.5 },
+            { id: 102, name: "Matcha Latte", price: "Rp 25.000", category: "Non-Kopi", img: "/images/matcha_latte.webp", rating: 5 },
+            { id: 103, name: "French Fries", price: "Rp 18.000", category: "Snack", img: "/images/french_fries.webp", rating: 4 },
+            { id: 104, name: "Latte", price: "Rp 20.000-25.000", category: "Kopi", img: "/images/latte.webp", rating: 4.5 },
         ];
         setProducts(defaultProducts);
         setLoading(false);
