@@ -40,9 +40,9 @@ function Cart({ cartItems, onRemove, onUpdateQty, onClose }) {
 
                                             {/* KONTROL JUMLAH (DIPERBARUI) */}
                                             <div className="qty-control" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '5px' }}>
-                                                <button type="button" onClick={() => onUpdateQty(index, -1)} style={{ background: '#444', border: 'none', color: 'white', width: '25px', height: '25px', borderRadius: '5px', cursor: 'pointer' }}>-</button>
+                                                <button type="button" onClick={() => onUpdateQty(index, -1)} aria-label="Kurangi Jumlah" style={{ background: '#444', border: 'none', color: 'white', width: '25px', height: '25px', borderRadius: '5px', cursor: 'pointer' }}>-</button>
                                                 <span style={{ color: '#cfa670', fontWeight: 'bold' }}>{item.qty || 1}</span>
-                                                <button type="button" onClick={() => onUpdateQty(index, 1)} style={{ background: '#cfa670', border: 'none', color: '#1a1a1a', width: '25px', height: '25px', borderRadius: '5px', cursor: 'pointer' }}>+</button>
+                                                <button type="button" onClick={() => onUpdateQty(index, 1)} aria-label="Tambah Jumlah" style={{ background: '#cfa670', border: 'none', color: '#1a1a1a', width: '25px', height: '25px', borderRadius: '5px', cursor: 'pointer' }}>+</button>
                                             </div>
                                         </div>
                                         <button className="btn-remove" onClick={() => onRemove(index)} style={{ marginLeft: 'auto' }}>Hapus</button>

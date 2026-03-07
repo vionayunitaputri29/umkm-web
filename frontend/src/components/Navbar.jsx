@@ -9,7 +9,14 @@ function Navbar({ onLogout, isLoggedIn, cartCount, onOpenCart }) {
         <nav className="navbar">
             <h2 className="nav-logo">Kedai Kopi</h2>
 
-            <div className={`menu-icon ${isOpen ? "open" : ""}`} onClick={() => setIsOpen(!isOpen)}>
+            <div
+                className={`menu-icon ${isOpen ? "open" : ""}`}
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label="Buka Menu"
+                role="button"
+                tabIndex="0"
+                onKeyDown={(e) => { if (e.key === 'Enter') setIsOpen(!isOpen); }}
+            >
                 <div className="bar"></div>
                 <div className="bar"></div>
                 <div className="bar"></div>

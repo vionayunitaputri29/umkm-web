@@ -9,7 +9,7 @@ function Hero() {
 
                 {/* Tombol diarahkan ke ID "menu" di halaman yang sama */}
                 <a href="#menu">
-                    <button className="btn-pesan-hero">Pesan Sekarang Juga</button>
+                    <button className="btn-pesan-hero" aria-label="Pesan Kopi Sekarang">Pesan Sekarang Juga</button>
                 </a>
             </div>
         </section>

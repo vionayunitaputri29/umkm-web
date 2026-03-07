@@ -49,14 +49,7 @@ function App() {
     };
 
     const handleCheckout = () => {
-        const phone = "6283181580035";
-        let message = `Halo Admin *KEDAI KOPI*, saya mau pesan:\n\n`;
-        cartItems.forEach((item, index) => {
-            message += `${index + 1}. *${item.name}* (${item.qty}x) - ${item.price}\n`;
-        });
-        const total = cartItems.reduce((acc, item) => acc + (parseInt(item.price.replace(/[^0-9]/g, "")) * (item.qty || 1)), 0);
-        message += `\n*Total Tagihan: Rp ${total.toLocaleString()}*`;
-        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
+        alert("Terima kasih! Ini adalah 'Mode Demo' untuk portofolio. Fitur pesanan via WhatsApp telah dinonaktifkan untuk tujuan pameran.");
         setCartItems([]);
         setIsCartOpen(false);
     };

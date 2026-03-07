@@ -5,7 +5,13 @@ function About() {
         <section id="about" className="about">
             <div className="about-container">
                 <div className="about-image">
-                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Coffee Shop" />
+                    <img
+                        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Suasana Kedai Kopi yang Nyaman"
+                        loading="lazy"
+                        width="800"
+                        height="533"
+                    />
                 </div>
                 <div className="about-info">
                     <h3>Tentang Kami</h3>

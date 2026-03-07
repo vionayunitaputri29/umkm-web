@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { QRCodeCanvas } from "qrcode.react"; // FITUR 3: QR Code
 import api from "../api";
 import "./AdminDashboard.css";
 
 function AdminDashboard() {
     const [products, setProducts] = useState([]);
-    const [form, setForm] = useState({ name: "", price: "", img: "", description: "" });
+    const [showQR, setShowQR] = useState(false);
 
     useEffect(() => { fetchProducts(); }, []);
 
@@ -13,14 +14,9 @@ function AdminDashboard() {
         setProducts(res.data);
     };
 
-    const handleSave = async (e) => {
-        e.preventDefault();
-        try {
-            await api.post("/products", form);
-            alert("Berhasil menambah menu!");
-            setForm({ name: "", price: "", img: "", description: "" });
-            fetchProducts();
-        } catch (err) { alert("Gagal Simpan!"); }
+    const toggleStock = async (id) => {
+        await api.put(`/products/${id}/toggle`);
+        fetchProducts();
     };
 
     const handleDelete = async (id) => {
@@ -31,19 +27,31 @@ function AdminDashboard() {
     };
 
     return (
-        <div className="admin-container" style={{ padding: '100px 20px' }}>
+        <div className="admin-container" style={{ padding: '100px 20px', color: 'white' }}>
             <h1>Dashboard Admin</h1>
-            <form onSubmit={handleSave} className="admin-form">
-                <input placeholder="Nama Kopi" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} required />
-                <input placeholder="Harga (Contoh: Rp 15.000)" value={form.price} onChange={e => setForm({ ...form, price: e.target.value })} required />
-                <input placeholder="URL Gambar Produk" value={form.img} onChange={e => setForm({ ...form, img: e.target.value })} required />
-                <button type="submit">Tambah Menu Baru</button>
-            </form>
+
+            {/* FITUR 3: Tombol QR Code */}
+            <button onClick={() => setShowQR(!showQR)} style={{ marginBottom: '20px', background: '#cfa670' }}>
+                {showQR ? "Tutup QR Code" : "Lihat QR Code Website"}
+            </button>
+
+            {showQR && (
+                <div style={{ background: 'white', padding: '20px', display: 'inline-block', borderRadius: '10px', marginBottom: '20px' }}>
+                    <QRCodeCanvas value={window.location.origin} size={200} />
+                    <p style={{ color: 'black', marginTop: '10px' }}>Scan untuk buka Menu Digital</p>
+                </div>
+            )}
+
             <div className="admin-list">
                 {products.map(p => (
-                    <div key={p._id} className="admin-item">
-                        <span>{p.name} - {p.price}</span>
-                        <button onClick={() => handleDelete(p._id)}>Hapus</button>
+                    <div key={p._id} className="admin-item" style={{ borderBottom: '1px solid #444', padding: '10px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <span>{p.name} - {p.isAvailable ? "✅ Aktif" : "❌ Habis"}</span>
+                        <div>
+                            <button onClick={() => toggleStock(p._id)} style={{ marginRight: '10px' }}>
+                                {p.isAvailable ? "Set Habis" : "Set Tersedia"}
+                            </button>
+                            <button onClick={() => handleDelete(p._id)} style={{ background: 'red' }}>Hapus</button>
+                        </div>
                     </div>
                 ))}
             </div>

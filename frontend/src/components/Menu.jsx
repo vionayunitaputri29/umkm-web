@@ -45,7 +45,13 @@ function Menu() {
                 {products.map(product => (
                     <div key={product.id || product._id} className="menu-card">
                         <div className="menu-img">
-                            <img src={product.img} alt={product.name} />
+                            <img
+                                src={product.img.startsWith('/') || product.img.startsWith('http') ? product.img : `/${product.img}`}
+                                alt={`Menu ${product.name}`}
+                                loading="lazy"
+                                width="300"
+                                height="200"
+                            />
                         </div>
                         <div className="menu-info">
                             <h4>{product.name}</h4>

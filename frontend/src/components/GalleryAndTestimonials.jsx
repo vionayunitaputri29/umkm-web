@@ -16,9 +16,9 @@ const GalleryAndTestimonials = () => {
                 <h1 style={{ fontSize: '2.5rem' }}>Eksplorasi Kedai</h1>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginTop: '30px' }}>
                     {/* Gambar simulasi dari internet agar terlihat profesional */}
-                    <img src="https://www.pinhome.id/info-area/wp-content/uploads/2022/06/5-Coffee-Shops-Kekinian-di-Jakarta-Timur4-1024x751.jpg" alt="Cafe 1" style={{ width: '100%', borderRadius: '15px' }} />
-                    <img src="https://www.pinhome.id/info-area/wp-content/uploads/2022/06/picture-1636086244-1024x752.jpg" alt="Cafe 2" style={{ width: '100%', borderRadius: '15px' }} />
-                    <img src="https://www.pinhome.id/info-area/wp-content/uploads/2022/06/80622b546ed84a5518a62da203f30499-1024x768.jpg" alt="Cafe 3" style={{ width: '100%', borderRadius: '15px' }} />
+                    <img src="https://www.pinhome.id/info-area/wp-content/uploads/2022/06/5-Coffee-Shops-Kekinian-di-Jakarta-Timur4-1024x751.jpg" alt="Interior Kedai Kopi yang Estetik" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '15px' }} loading="lazy" />
+                    <img src="https://www.pinhome.id/info-area/wp-content/uploads/2022/06/picture-1636086244-1024x752.jpg" alt="Suasana Outdoor Kedai Kopi" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '15px' }} loading="lazy" />
+                    <img src="https://www.pinhome.id/info-area/wp-content/uploads/2022/06/80622b546ed84a5518a62da203f30499-1024x768.jpg" alt="Pelayanan Barista di Kedai Kopi" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '15px' }} loading="lazy" />
                 </div>
             </div>
 

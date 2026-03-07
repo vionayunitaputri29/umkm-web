@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 function Login({ onLogin }) {
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
     const [isRegister, setIsRegister] = useState(false);
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -44,7 +44,7 @@ function Login({ onLogin }) {
             if (user) {
                 onLogin();
                 alert(`Selamat datang kembali, ${username}! ✨`);
-                navigate("/"); 
+                navigate("/");
             } else {
                 alert("Username atau Password salah!");
             }
@@ -89,10 +89,10 @@ function Login({ onLogin }) {
                                 onChange={(e) => setEmail(e.target.value)}
                                 style={{ width: "100%", padding: "14px", borderRadius: "12px", border: "none", background: "rgba(255,255,255,0.1)", color: "white" }}
                                 required
-                            />``
+                            />
                         </div>
                     )}
-                    
+
                     <div style={{ textAlign: "left", marginBottom: "16px" }}>
                         <label style={{ color: "white", fontSize: "14px", fontWeight: "600", display: "block", marginBottom: "8px" }}>Username</label>
                         <input
@@ -142,7 +142,7 @@ function Login({ onLogin }) {
 
                 <div style={{ marginTop: "24px", fontSize: "14px", color: "white" }}>
                     <p>
-                        {isRegister ? "Sudah punya akun?" : "Belum punya akun?"} 
+                        {isRegister ? "Sudah punya akun?" : "Belum punya akun?"}
                         <span onClick={() => setIsRegister(!isRegister)} style={{ color: "#cfa670", cursor: "pointer", fontWeight: "700", marginLeft: "5px" }}>
                             {isRegister ? "Masuk" : "Daftar"}
                         </span>
